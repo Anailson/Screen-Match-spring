@@ -16,11 +16,15 @@ public class FilmeController {
 
     private List<Filme> filmes = new ArrayList<>();
 
-    @GetMapping
+    @GetMapping("/formulario")
     public String carregaPaginaFormulario(){
         return "filmes/formulario";
     }
 
+    @GetMapping
+    public String carregaPaginaListagem() {
+        return "filmes/listagem";
+    }
    @PostMapping()
     public String cadastraFilme(DadosCadastroFilme dados){
       // System.out.println(dados);
@@ -29,7 +33,7 @@ public class FilmeController {
 
        System.out.println(filmes);
 
-       return "filmes/formulario";
+       return "filmes/listagem";
     }
 }
 
