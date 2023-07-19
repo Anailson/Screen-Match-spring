@@ -33,9 +33,8 @@ public class FilmeController {
        var filme = new Filme(dados);
        filmes.add(filme);
 
-       System.out.println(filmes);
-
-       return "filmes/listagem";
+      // System.out.println(filmes);
+       return "redirect:/filmes";
     }
 }
 
